@@ -1,0 +1,53 @@
+/* no support for transparent pngs */
+#rootHeaderLeft {
+	background-image: none;
+	padding-left: 0;
+}
+
+.sky, .earth, .rock {
+	background-image: none;
+}
+
+/* no support for margin: auto to center content */
+.earth {
+	text-align: center;
+}
+
+#rootContainer {
+	text-align: left;
+}
+
+#rootHeader {
+	background-image: none;
+}
+
+/* IE6 doesn't recognize the CSS descendant selectors used in template.css */
+#rootHeader h1 a, 
+#rootHeader h1 a:visited, 
+#rootHeader h1 a:hover {
+  text-decoration: none;
+  font-size: 50pt;
+  display: block;
+  float: left;
+}
+
+#rootHeader h1.logo { 
+  background-image: none; 
+  margin: 0; 
+  padding: 0;
+  height: 50pt;
+}
+#rootHeader h1.logo a {
+   padding: 0;
+   margin-top: -10pt;
+}
+/* disable top nav rather than engineer a separate solution for ie6 */
+#rootTop  {
+	display: none;
+}
+
+/* seems to decrease incidence of background color / float bug */
+#rootCenter, .leftfloat {
+	position: relative;
+}
+

@@ -1,0 +1,443 @@
+@import url("fonts.css");
+
+/* background images */
+.sky {
+	height: 110pt;
+	background: #bfbfff url('../images/grass.png') repeat-x scroll bottom left;
+}
+
+.earth {
+	background-color: #b28257;
+	overflow: visible;
+	z-index: 10;
+	background: #785331 url('../images/dirt.png') repeat-x scroll top left;
+    margin-bottom: -160pt;
+}
+
+.rock {
+	background-color: #bfbfbf;
+	height: 160pt;
+	background: #bfbfbf url('../images/rock.png') repeat-x scroll top;
+	position: relative;
+}
+
+/* positioning and styles for main content area */
+
+#rootOutline {
+  /* border: 15pt solid #ffdf00; TODO: media stylesheets with gamma info */
+  border: 15pt solid #ffbf00;
+  background-color: #ffbf00;
+  border-radius: 25pt;
+
+  -moz-border-radius: 25pt;
+  -webkit-border-radius: 25pt;
+}
+
+#rootContainer {
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 120ex;
+  z-index: 10;
+  position: relative;
+  top: -75pt;
+
+  border: 2pt solid #df9f00;
+  border-radius: 27pt;
+
+  -moz-border-radius: 27pt;
+  -webkit-border-radius: 27pt;
+}
+
+#rootHeader {
+  position: relative;
+  border: 3pt solid #feaec4;
+  z-index: 100;
+  color: #fff5f5;
+  height: 52pt;
+  padding: 5pt 10px;
+  background: #cf3f5f url('../images/rgrad.png') repeat-x bottom center ;
+  border-top-right-radius: 10pt;
+  border-top-left-radius: 10pt;
+  
+  -moz-border-radius-topleft: 10pt;
+  -moz-border-radius-topright: 10pt;
+  -webkit-border-top-right-radius: 10pt;
+  -webkit-border-top-left-radius: 10pt;
+}
+
+#rootHeader a, 
+#rootHeader a:visited, 
+#rootHeader a:hover {
+  color: #fff5f5;
+}
+
+#rootHeaderLeft {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 72px;
+  height: 52pt;
+  background: transparent url('../images/beet.png') no-repeat scroll center left;
+  text-transform: lowercase;
+}
+
+#rootHeader h1 {
+  margin: 0;
+  padding: 0;
+  height: 38pt;
+  font-family: "alba", Arial, sans-serif;
+  font-weight: normal;
+}
+
+#rootHeader h1 > a, 
+#rootHeader h1 > a:visited, 
+#rootHeader h1 > a:hover {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-size: 50pt;
+  line-height: 38pt;
+  display: inline-block;
+}
+
+/* image logo - hide text */
+#rootHeader h1.logo {
+    min-width: 140px;
+    min-height: 35pt;
+    background: transparent url('../images/beet-logo.png') no-repeat scroll center left;
+    margin-left: 2pt;
+    overflow: hidden;
+}
+
+#rootHeader h1.logo > a, 
+#rootHeader h1.logo > a:visited, 
+#rootHeader h1.logo > a:hover {
+  height: 100%;
+  display: block;
+  color: transparent;
+  font-size: 0;
+}
+
+#rootBreadcrumbs {
+  font-size: 10pt;
+  display: block;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  white-space: nowrap;
+  padding-left: 2pt;
+}
+
+#rootTop {
+  width: 100%;
+  text-align: center;
+  font-size: 90%;
+  height: 52pt;
+  display: table-cell;
+  vertical-align: middle;
+  padding-right: 20pt;
+}
+
+/* top-positioned RSS link */
+/* top-positioned RSS link */
+#rootSyndicate {
+  padding: 0;
+  display: inline;
+  position: absolute;
+  right: 10pt;
+  top: 50%;
+  margin-top: -7px;
+}
+#rootSyndicate a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+#rootSyndicate a img {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+#rootSyndicate a span {
+  display: none;
+}
+
+#rootCenter {
+  background-color: #fff;
+  border-color: #ffbf00;
+  border-width: 15pt 0;
+  border-style: solid;
+}
+
+#rootLeft {
+  float: left;
+  font-size: smaller;
+  padding: 0 10pt;
+  min-width: 140px;
+  width: 20ex;
+  background-color: #efefef;
+}
+
+#rootContent {
+  padding: 0 10pt;
+  border: 2pt solid #df9f00;
+  font-size: 80%;
+}
+
+#rootFooter {
+
+  padding: 10pt;
+  min-height: 40px;
+  vertical-align: middle;
+
+  border: 2pt solid #df9f00;
+ 
+  background-color: #ffdf90;
+  border-bottom-right-radius: 10pt;
+  border-bottom-left-radius: 10pt;
+  
+  -moz-border-radius-bottomleft: 10pt;
+  -moz-border-radius-bottomright: 10pt;
+  -webkit-border-bottom-right-radius: 10pt;
+  -webkit-border-bottom-left-radius: 10pt;
+}
+
+#sfLogo {
+  float: left;
+  width: 20ex;
+  min-width: 150px;
+}
+
+#sfLogo img {
+  border: none;
+}
+
+#rootFooter .copyright {
+  font-size: x-small;
+}
+
+/* top-positioned menu layout */
+#rootTop > .moduletable {
+  padding: 0;
+  margin: 0;
+}
+
+#rootTop > .moduletable > h3 {
+  display: none;
+}
+
+#rootTop > .moduletable > ul.menu {
+  list-style: none;
+  margin: 0;
+}
+
+#rootTop > .moduletable > ul.menu > li {
+  position: relative;
+  display: inline-block;
+}
+/* workaround for FF2 inline-block problems */
+#rootTop > .moduletable > ul.menu > li, x:-moz-any-link {
+  display: block;
+  float: left;
+}
+/* normal behavior for FF3 */
+#rootTop > .moduletable > ul.menu > li, x:-moz-any-link, x:default { 
+  display: inline-block;
+  float: none; 
+}
+
+#rootTop > .moduletable > ul.menu > li > a {
+  padding: 2pt 5pt;
+  display: block;
+  text-decoration: none;
+}
+
+/* nested menu properties */
+#rootTop .parent ul {
+  display: none;
+  margin: 0;
+  padding: 2pt;
+  list-style: none;
+  white-space: nowrap;
+
+  color: #fff5f5;
+  background: #cf3f5f url('../images/rgrad.png') repeat-x bottom center ;
+
+  border-style: solid;
+  border-width: 2pt 0 0 0;
+
+  border-radius: 10pt;
+  -moz-border-radius: 10pt;
+  -webkit-border-radius: 8pt;
+}
+
+#rootTop .parent ul li {
+}
+
+#rootTop .parent ul a {
+  color: #fff5f5;
+  text-decoration: none;
+  display: block;
+  padding: 3pt 6pt;
+}
+
+#rootTop .parent ul a:hover {
+  background-color: #fff5f5;
+  color: #cf3f5f;
+}
+
+#rootTop li:hover > a {
+  background-color: #fff5f5;
+  color: #cf3f5f;
+  border-radius: 10pt;
+  -moz-border-radius: 10pt;
+  -webkit-border-radius: 8pt;
+}
+
+#rootTop .parent:hover {
+  cursor: pointer;
+}
+
+#rootTop .parent:hover > ul {
+  display: block;
+  position: absolute;
+  z-index: 100;
+  width: 22ex;
+  left: -11ex;
+  margin-left: 50%;
+}
+
+#rootTop .parent:last-child > ul {
+  left: auto;
+  right: -10pt;
+}
+
+/* left-positioned menu */
+
+#rootLeft ul.menu {
+  list-style: none;
+  padding-left: 10pt;
+  white-space: nowrap;
+}
+
+/* overrides for general content */
+
+.componentheading {
+  font-size: xx-large;
+  font-weight: bold;
+  margin-top: 1ex;
+  border-bottom: 2pt solid grey;
+}
+
+.contentheading, h1, h2 {
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+.article-tools {
+  background: #faf0f0;
+  padding: 5pt;
+  font-size: smaller;
+  border: 1pt solid #faa;
+}
+
+.article-meta > span {
+  margin-right: 1em;
+}
+
+.article-content {
+  position: relative;
+}
+
+.article-content h1 {
+  margin: 0;
+}
+
+.pagenavbar {
+  margin-top: 10pt;
+  display: block;
+  text-align: center;
+  background-color: #efefef;
+  padding: 3pt 6pt;
+  font-weight: bold;
+  border: 2pt solid #999;
+  border-radius: 10pt;
+  -moz-border-radius: 10pt;
+  -webkit-border-radius: 8pt;
+}
+
+.contenttoc {
+  width: 100%;
+  display: block;
+  margin-top: 10pt;
+  background-color: #efefef;
+  padding: 2pt;
+  border: 2pt solid #999;
+  border-radius: 10pt;
+  -moz-border-radius: 10pt;
+  -webkit-border-radius: 8pt;
+}
+
+.contenttoc a {
+  padding: 3pt 6pt;
+}
+
+.contenttoc a, .contenttoc th {
+  display: none;
+  text-decoration: none;
+  color: black;
+}
+
+.contenttoc a.active {
+  display: block;
+  font-weight: bold;
+}
+
+.contenttoc:hover a, 
+.contenttoc:hover a.active {
+  display: block;
+}
+
+.contenttoc a:hover {
+  background-color: #666;
+  color: #efefef;
+  border-radius: 8pt;
+  -moz-border-radius: 8pt;
+  -webkit-border-radius: 6pt;
+}
+
+.pagenavcounter {
+   position: absolute;
+   right: 10pt;
+   top: 6pt;
+}
+
+.article_column {
+  padding-right: 5pt;
+}
+
+.column_separator {
+  padding-left: 5pt;
+}
+
+/* custom styles for articles */
+
+.leftfloat {
+  float: left;
+  margin-right: 10pt;
+  padding-right: 10pt;
+  border-right: 1pt dotted;
+}
+
+.leftfloat > h2 {
+  margin-top: 0;
+}
+
+pre {
+  border: 1pt solid gray;
+  padding: 2pt 4pt;
+  background-color: #f6f6f6;
+  font-size: 110%;
+  overflow: auto;
+}
